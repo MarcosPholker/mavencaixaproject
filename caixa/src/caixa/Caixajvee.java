@@ -11,11 +11,20 @@ public class Caixajvee {
 				JOptionPane.showInputDialog("nome do cliente:"), 
 				JOptionPane.showInputDialog("email do cliente:"),
 				JOptionPane.showInputDialog("endereco do cliente:"));
-		pedido.addproduct(JOptionPane.showInputDialog("Produto"), Double.parseDouble(JOptionPane.showInputDialog("preco")), Integer.parseInt(JOptionPane.showInputDialog("quantidade")) );
+		
+		
+		
+		
+		String newPedido;
+		do {
+			pedido.addproduct(JOptionPane.showInputDialog("Produto"), Double.parseDouble(JOptionPane.showInputDialog("preco")), Integer.parseInt(JOptionPane.showInputDialog("quantidade")));
+			newPedido = JOptionPane.showInputDialog("deseja continuar o pedido? (s/n)");
+			System.out.println(newPedido);
+		}while (!"n".equals(newPedido));
+		
+		System.out.println("valor total: " + pedido.getValorTotal());
 		
 		System.out.println(pedido);
-		System.out.println("teste commit");
-		System.out.println("outro teste");
 	}
 
 }
