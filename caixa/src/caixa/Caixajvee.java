@@ -14,6 +14,7 @@ public class Caixajvee {
 		pedido.addproduct(JOptionPane.showInputDialog("Produto"), null, 0);
 		
 		System.out.println(pedido);
+		System.out.println("teste commit");
 	}
 
 }
