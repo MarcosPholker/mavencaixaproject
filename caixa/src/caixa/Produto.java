@@ -3,7 +3,7 @@ package caixa;
 public class Produto {
 	private String name;
 	private Double price;
-	private int stock = 0;
+	private int stock = 50;
 	
 	public String getName() {
 		return name;
@@ -13,7 +13,7 @@ public class Produto {
 	public Produto(String name, Double price, int stock) {
 		this.name = name;
 		this.price = price;
-		this.stock = stock;
+		this.stock = this.stock - stock;
 	}
 
 

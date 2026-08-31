@@ -8,7 +8,7 @@ public class Pedido {
 	ArrayList<Produto> produto = new ArrayList<>();
 	
 	public void addproduct(String name, Double price, int stock) {
-		produto.add(new Produto(name, price, stock++));
+		produto.add(new Produto(name, price, stock));
 	}
 	
 	public void removeProduct(String nameproduct) {

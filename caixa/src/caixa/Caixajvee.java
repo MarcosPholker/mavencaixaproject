@@ -11,7 +11,7 @@ public class Caixajvee {
 				JOptionPane.showInputDialog("nome do cliente:"), 
 				JOptionPane.showInputDialog("email do cliente:"),
 				JOptionPane.showInputDialog("endereco do cliente:"));
-		pedido.addproduct(JOptionPane.showInputDialog("Produto"), null, 0);
+		pedido.addproduct(JOptionPane.showInputDialog("Produto"), Double.parseDouble(JOptionPane.showInputDialog("preco")), Integer.parseInt(JOptionPane.showInputDialog("quantidade")) );
 		
 		System.out.println(pedido);
 		System.out.println("teste commit");
