@@ -15,6 +15,7 @@ public class Caixajvee {
 		
 		System.out.println(pedido);
 		System.out.println("teste commit");
+		System.out.println("outro teste");
 	}
 
 }
