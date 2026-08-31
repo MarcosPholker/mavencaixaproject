@@ -17,6 +17,10 @@ public class Produto {
 	}
 
 
+	public Double valorTotal(Double price) {
+		return price += this.price;
+	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -36,7 +40,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "Produto name=" + name + ", price=" + price + ", stock=" + stock;
+		return "Produto name=" + name + ", price=" + price + ", stock=" + stock + ", valorTotal: " + valorTotal(price);
 	}
 	
 	
