@@ -35,7 +35,7 @@ public class Produto {
 	}
 	public void setStock(int stock) {
 		this.stock = stock;
-	}
+	} 
 
 
 	@Override

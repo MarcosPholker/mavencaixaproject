@@ -11,6 +11,7 @@ public class Pedido {
 		produto.add(new Produto(name, price, stock));
 	}
 	
+	
 	public void removeProduct(String nameproduct) {
 		produto.removeIf(produto -> produto.getName().equals(nameproduct));
 	}

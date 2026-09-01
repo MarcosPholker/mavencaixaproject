@@ -13,6 +13,7 @@ public class Caixajvee {
 				JOptionPane.showInputDialog("endereco do cliente:"));
 		
 		
+		
 		String newPedido;
 		do {
 			pedido.addproduct(JOptionPane.showInputDialog("Produto"), Double.parseDouble(JOptionPane.showInputDialog("preco")), Integer.parseInt(JOptionPane.showInputDialog("quantidade")));
