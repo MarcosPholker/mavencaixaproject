@@ -25,12 +25,16 @@ public class ClienteDAO {
         session.close();
 	}
 	
-	public void deletarCliente(Cliente cliente) {
+	public void deletarCliente(int id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		
 		Transaction transaction = session.beginTransaction();
 		
-		session.remove(cliente);
+		Cliente cliente = session.find(Cliente.class, id);
+		
+		if(cliente != null) {
+			session.remove(cliente);
+		}
 		
 		transaction.commit();
 		session.close();

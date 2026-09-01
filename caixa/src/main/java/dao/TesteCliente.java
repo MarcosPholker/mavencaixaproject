@@ -15,21 +15,22 @@ public class TesteCliente {
         
         ClienteDAO dao = new ClienteDAO();
 
-        dao.inserirCliente(cliente);
+        //dao.inserirCliente(cliente);
 
-        System.out.println("Cliente salvo!");
-        System.out.println("ID gerado: " + cliente.getId());
+        //System.out.println("Cliente salvo!");
+        //System.out.println("ID gerado: " + cliente.getId());
         
-        System.out.println("atualizando cliente!");
-        cliente.setNome("joao");
-        dao.attCliente(cliente);
+       // System.out.println("atualizando cliente!");
+       // cliente.setNome("joao");
+       // dao.attCliente(cliente);
         
         
-        // System.out.println("teste cliente deletado");
-        // dao.deletarCliente(cliente);
+        System.out.println("teste cliente deletado");
         
-        System.out.println("teste todos os clientes na tela");
-        System.out.println(dao.listarClientes()+"\n");
+        dao.deletarCliente(9);
+        
+        //System.out.println("teste todos os clientes na tela");
+        //System.out.println(dao.listarClientes()+"\n");
         
     }
 }
