@@ -1,4 +1,4 @@
-package caixa;
+package model;
 
 public class Produto {
 	private String name;

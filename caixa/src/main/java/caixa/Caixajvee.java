@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import dao.ClienteDAO;
 import model.Cliente;
+import model.Pedido;
 
 public class Caixajvee {
 

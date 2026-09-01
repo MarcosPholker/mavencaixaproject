@@ -1,12 +1,25 @@
 package model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Cliente {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private String email;
 	private String telefone;
 	
 	
+	
+	
+	public Cliente() {
+	}
+
 	public Cliente(String name, String email, String telefone) {
 		this.nome = name;
 		this.email = email;
@@ -19,10 +32,10 @@ public class Cliente {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
+	public String getNome() {
 		return nome;
 	}
-	public void setName(String name) {
+	public void setNome(String name) {
 		this.nome = name;
 	}
 	public String getEmail() {

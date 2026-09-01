@@ -1,12 +1,10 @@
-package caixa;
+package model;
 
 import java.util.ArrayList;
 
-import model.Cliente;
-
 
 public class Pedido {
-	Cliente cliente;
+	public Cliente cliente;
 	ArrayList<Produto> produto = new ArrayList<>();
 	
 	public void addproduct(String name, Double price, int stock) {
