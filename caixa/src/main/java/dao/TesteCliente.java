@@ -12,6 +12,7 @@ public class TesteCliente {
                 "11999999999"
         );
 
+        
         ClienteDAO dao = new ClienteDAO();
 
         dao.inserirCliente(cliente);

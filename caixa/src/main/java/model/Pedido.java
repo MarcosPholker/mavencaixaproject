@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 
-
 public class Pedido {
 	public Cliente cliente;
 	ArrayList<Produto> produto = new ArrayList<>();

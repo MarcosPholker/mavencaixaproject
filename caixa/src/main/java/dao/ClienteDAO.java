@@ -57,6 +57,7 @@ public class ClienteDAO {
 		
 		transaction.commit();
 		session.close();
+		
 	}
 	
 	

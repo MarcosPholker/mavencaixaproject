@@ -37,7 +37,6 @@ public class Produto {
 		this.stock = stock;
 	} 
 
-
 	@Override
 	public String toString() {
 		return "Produto name=" + name + ", price=" + price + ", stock=" + stock + ", valorTotal: " + valorTotal(price);
