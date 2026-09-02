@@ -31,8 +31,10 @@
         <property name="hibernate.format_sql">
             true
         </property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         
         <mapping class="model.Cliente"/>
+        <mapping class="model.Produto"/>
 
     </session-factory>
 

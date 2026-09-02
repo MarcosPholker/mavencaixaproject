@@ -1,6 +1,7 @@
 package dao;
 
 import model.Cliente;
+import model.Produto;
 
 public class TesteCliente {
 
@@ -11,6 +12,8 @@ public class TesteCliente {
                 "marcos@email.com",
                 "11999999999"
         );
+        Produto produto = new Produto("caneta", 1.50, 10);
+        ProdutoDAO pdao = new ProdutoDAO();
 
         
         ClienteDAO dao = new ClienteDAO();
@@ -31,9 +34,25 @@ public class TesteCliente {
         
         dao.buscarPorId(14);
         
-        System.out.println(dao.buscarPorId(14).toString());
+        //System.out.println(dao.buscarPorId(14).toString());
         //System.out.println("teste todos os clientes na tela");
         //System.out.println(dao.listarClientes()+"\n");
+        
+        
+        //pdao.addProduto(produto);
+        //pdao.addProduto(new Produto("lapis", 1.10, 20));
+        
+        
+        
+        //System.out.println(pdao.buscarPorId(2));
+        
+        //produto.setName("macarrao");
+        
+        //pdao.attProduto(produto);
+        
+        System.out.println(pdao.listarProdutos());
+        
+        pdao.deletarProduto(3);
         
     }
 }
