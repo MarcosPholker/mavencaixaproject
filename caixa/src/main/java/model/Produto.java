@@ -22,8 +22,8 @@ public class Produto {
 	private Double price;
 	private int stock = 50;
 	
-	@OneToMany(mappedBy = "produtos")
-	private List<Pedido> pedido;
+	@ManyToOne
+	private ItemPedido itemPedido;
 	
 	public Produto() {
 	}
@@ -33,7 +33,6 @@ public class Produto {
 		this.price = price;
 		this.stock = this.stock - stock;
 	}
-	
 	
 	public int getId() {
 		return id;

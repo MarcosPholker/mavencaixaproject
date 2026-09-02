@@ -1,48 +1,36 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Pedido {
+public class ItemPedido {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	
-	@ManyToOne
-	public Cliente cliente;
-	
 	@OneToMany
-	ArrayList<ItemPedido> itemPedido;
+	private List<Produto> produto;
 	
-	
-	
-	
-	public Pedido() {
-	}
 
+	public ItemPedido() {
+		super();
+	}
 
 	public int getId() {
 		return id;
 	}
 
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	
 
-	@Override
-	public String toString() {
-		return cliente + "";
-	}
 }
