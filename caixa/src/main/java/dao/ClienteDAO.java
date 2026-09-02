@@ -53,6 +53,20 @@ public class ClienteDAO {
 		return clientes;
 	}
 	
+	public Cliente buscarPorId(int id) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		
+		Cliente cliente = session.find(Cliente.class, id);
+		
+		Transaction transaction = session.beginTransaction();
+		
+		
+		transaction.commit();
+		session.close();
+		
+		return cliente;
+	}
+	
 	public void attCliente (Cliente cliente) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		

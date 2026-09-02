@@ -29,6 +29,9 @@ public class TesteCliente {
         
         dao.deletarCliente(9);
         
+        dao.buscarPorId(14);
+        
+        System.out.println(dao.buscarPorId(14).toString());
         //System.out.println("teste todos os clientes na tela");
         //System.out.println(dao.listarClientes()+"\n");
         
