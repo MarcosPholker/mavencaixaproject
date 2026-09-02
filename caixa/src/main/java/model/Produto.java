@@ -1,10 +1,15 @@
 package model;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Produto {
@@ -15,6 +20,9 @@ public class Produto {
 	private String name;
 	private Double price;
 	private int stock = 50;
+	
+	@ManyToOne
+	private List<Pedido> pedido = new ArrayList<>();
 	
 	public Produto() {
 	}

@@ -2,8 +2,15 @@ package model;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+
 public class Pedido {
+	
+	@ManyToOne
 	public Cliente cliente;
+	
+	@OneToMany
 	ArrayList<Produto> produto = new ArrayList<>();
 	
 	public void addproduct(String name, Double price, int stock) {

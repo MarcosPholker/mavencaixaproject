@@ -1,9 +1,13 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Cliente {
@@ -13,6 +17,9 @@ public class Cliente {
 	private String nome;
 	private String email;
 	private String telefone;
+	@OneToMany
+	private List<Pedido> pedido = new ArrayList<>();
+	
 	
 	public Cliente() {
 	}
