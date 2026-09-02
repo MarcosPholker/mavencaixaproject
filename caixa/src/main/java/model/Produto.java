@@ -22,7 +22,7 @@ public class Produto {
 	private Double price;
 	private int stock = 50;
 	
-	@ManyToOne
+	@OneToMany(mappedBy = "produto")
 	private ItemPedido itemPedido;
 	
 	public Produto() {

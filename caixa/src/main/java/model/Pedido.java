@@ -20,7 +20,7 @@ public class Pedido {
 	@ManyToOne
 	public Cliente cliente;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "pedido")
 	ArrayList<ItemPedido> itemPedido;
 	
 	
