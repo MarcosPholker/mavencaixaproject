@@ -17,8 +17,9 @@ public class Cliente {
 	private String nome;
 	private String email;
 	private String telefone;
-	@OneToMany
-	private List<Pedido> pedido = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "cliente")
+	private List<Pedido> pedido;
 	
 	
 	public Cliente() {

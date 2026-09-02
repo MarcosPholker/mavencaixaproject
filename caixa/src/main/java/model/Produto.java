@@ -10,6 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Produto {
@@ -21,8 +22,8 @@ public class Produto {
 	private Double price;
 	private int stock = 50;
 	
-	@ManyToOne
-	private List<Pedido> pedido = new ArrayList<>();
+	@OneToMany(mappedBy = "produtos")
+	private List<Pedido> pedido;
 	
 	public Produto() {
 	}
