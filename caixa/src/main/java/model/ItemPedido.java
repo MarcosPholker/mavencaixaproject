@@ -18,7 +18,7 @@ public class ItemPedido {
 	private int id;
 	
 	@ManyToOne
-	private List<Produto> produto;
+	private Produto produto;
 	
 	
 	@ManyToOne
