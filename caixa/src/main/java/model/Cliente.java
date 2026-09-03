@@ -1,6 +1,4 @@
 package model;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -31,6 +29,15 @@ public class Cliente {
 		this.telefone = telefone;
 	}
 	
+	
+	public List<Pedido> getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(List<Pedido> pedido) {
+		this.pedido = pedido;
+	}
+
 	public int getId() {
 		return id;
 	}

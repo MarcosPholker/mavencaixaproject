@@ -1,14 +1,16 @@
 package model;
 
+
 import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+
 
 @Entity
 public class ItemPedido {
@@ -17,8 +19,8 @@ public class ItemPedido {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@ManyToOne
-	private Produto produto;
+	@OneToMany(mappedBy = "itemPedido")
+	private List<Produto> produto;
 	
 	
 	@ManyToOne
@@ -26,8 +28,28 @@ public class ItemPedido {
 	
 
 	public ItemPedido() {
-		super();
 	}
+
+	
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
+	}
+
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
 
 	public int getId() {
 		return id;

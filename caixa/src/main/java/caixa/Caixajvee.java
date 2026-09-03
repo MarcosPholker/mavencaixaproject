@@ -22,7 +22,7 @@ public class Caixajvee {
 		
 		String newPedido;
 		do {
-			pedido.addproduct(JOptionPane.showInputDialog("Produto"), Double.parseDouble(JOptionPane.showInputDialog("preco")), Integer.parseInt(JOptionPane.showInputDialog("quantidade")));
+			//pedido.addproduct(JOptionPane.showInputDialog("Produto"), Double.parseDouble(JOptionPane.showInputDialog("preco")), Integer.parseInt(JOptionPane.showInputDialog("quantidade")));
 			newPedido = JOptionPane.showInputDialog("deseja continuar o pedido? (s/n)");
 			System.out.println(newPedido);
 		}while (!"n".equals(newPedido));

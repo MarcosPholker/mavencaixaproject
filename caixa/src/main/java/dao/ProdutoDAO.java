@@ -1,8 +1,6 @@
 package dao;
 
 import java.util.List;
-
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -10,11 +8,13 @@ import model.Produto;
 
 public class ProdutoDAO {
 
-	public void addProduto(Produto produto) {
+	public void addProduto(List<Produto> produto) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
-
-		session.persist(produto);
+		
+		for(Produto p : produto) {
+			session.persist(p);
+		}
 
 		transaction.commit();
 

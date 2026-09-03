@@ -1,7 +1,6 @@
 package model;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -9,8 +8,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class Produto {
@@ -22,11 +19,25 @@ public class Produto {
 	private Double price;
 	private int stock = 50;
 	
-	@OneToMany(mappedBy = "produto")
-	private ItemPedido itemPedido;
+	@ManyToMany
+	private List<ItemPedido> itemPedido;
 	
 	public Produto() {
 	}
+	
+	
+
+	public List<ItemPedido> getItemPedido() {
+		return itemPedido;
+	}
+
+
+
+	public void setItemPedido(List<ItemPedido> itemPedido) {
+		this.itemPedido = itemPedido;
+	}
+
+
 
 	public Produto(String name, Double price, int stock) {
 		this.name = name;

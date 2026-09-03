@@ -1,6 +1,6 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,11 +21,38 @@ public class Pedido {
 	public Cliente cliente;
 	
 	@OneToMany(mappedBy = "pedido")
-	ArrayList<ItemPedido> itemPedido;
+	List<ItemPedido> itemPedido;
 	
 	
 	public Pedido() {
 	}
+	
+	
+
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+
+
+
+	public List<ItemPedido> getItemPedido() {
+		return itemPedido;
+	}
+
+
+
+
+	public void setItemPedido(List<ItemPedido> itemPedido) {
+		this.itemPedido = itemPedido;
+	}
+
+
 
 
 	public int getId() {
