@@ -8,13 +8,11 @@ import model.Produto;
 
 public class ProdutoDAO {
 
-	public void addProduto(List<Produto> produto) {
+	public void addProduto(Produto produto) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
-		
-		for(Produto p : produto) {
-			session.persist(p);
-		}
+	
+		session.persist(produto);
 
 		transaction.commit();
 

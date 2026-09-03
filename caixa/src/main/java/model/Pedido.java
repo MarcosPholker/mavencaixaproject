@@ -18,10 +18,10 @@ public class Pedido {
 	
 	
 	@ManyToOne
-	public Cliente cliente;
+	private Cliente cliente;
 	
 	@OneToMany(mappedBy = "pedido")
-	List<ItemPedido> itemPedido;
+	private List<ItemPedido> itemPedido;
 	
 	
 	public Pedido() {
@@ -64,10 +64,16 @@ public class Pedido {
 		this.id = id;
 	}
 
-	
+
+
 
 	@Override
 	public String toString() {
-		return cliente + "";
+		return "cliente: " + cliente + "\n"+"item do pedido: " + itemPedido;
 	}
+
+	
+
+
+	
 }

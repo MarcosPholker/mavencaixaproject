@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Produto {
@@ -19,7 +20,7 @@ public class Produto {
 	private Double price;
 	private int stock = 50;
 	
-	@ManyToMany
+	@OneToMany(mappedBy = "produto")
 	private List<ItemPedido> itemPedido;
 	
 	public Produto() {
@@ -82,7 +83,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "Produto name=" + name + ", price=" + price + ", stock=" + stock + ", valorTotal: " + valorTotal(price);
+		return "Nome do Produto id:" + id + " " + name + ", price: " + price + ", stock: " + stock + ", valorTotal: " + valorTotal(price);
 	}
 	
 	
