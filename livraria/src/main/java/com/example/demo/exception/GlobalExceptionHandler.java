@@ -36,4 +36,12 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(404).body(erro);
     }
+    @ExceptionHandler(UsuarioNotFoundException.class)
+    public ResponseEntity<Map<String, String>> tratarUsuarioNaoEncontrado(UsuarioNotFoundException exception){
+    	Map<String, String> erro = new HashMap<>();
+    	
+    	erro.put("erro", exception.getMessage());
+    	
+    	return ResponseEntity.status(404).body(erro);
+    }
 }
